@@ -156,7 +156,7 @@ export const TRANSLATIONS: Record<Lang, SiteContent> = {
     meta: {
       title: 'MMM — Software Solutions',
       description:
-        'MMM builds websites and web applications for businesses in Egypt and the region.',
+        'MMM builds websites for small businesses and web applications for companies in Egypt and the region.',
     },
     nav: {
       links: [
@@ -175,11 +175,12 @@ export const TRANSLATIONS: Record<Lang, SiteContent> = {
       titleLine1: 'Websites and web apps,',
       titleLine2: 'built properly.',
       tagline:
-        'MMM is a Cairo-based software studio. We design and build web products — from the first conversation through to launch and handoff.',
+        'MMM is a Cairo-based software solutions company. We build websites for any small business — from the first conversation through to launch and handoff.',
       btnPrimary: 'Start a project',
       btnSecondary: 'View our work',
       focusTitle: 'Typical projects',
       focusItems: [
+        'Websites for any small business',
         'Company websites with CMS',
         'Admin panels and internal tools',
         'E-commerce and booking flows',
@@ -188,9 +189,9 @@ export const TRANSLATIONS: Record<Lang, SiteContent> = {
     about: {
       label: 'About',
       title: 'Who we are',
-      subtitle: 'A Cairo-based studio — software built to last.',
+      subtitle: 'A Cairo-based company — software built to last.',
       intro:
-        'MMM is a small software studio. We take on a limited number of projects at a time and work directly with you from scope to handoff — no templates, no middlemen.',
+        'MMM is a small software solutions company. We take on a limited number of projects at a time and work directly with you from scope to handoff — no templates, no middlemen.',
       philosophyTitle: 'Built to last, not to impress',
       philosophy:
         'Good software is quiet — it works, loads fast, and stays maintainable. We choose fewer clients so each product gets the focus it deserves.',
@@ -216,7 +217,7 @@ export const TRANSLATIONS: Record<Lang, SiteContent> = {
       items: [
         { value: '+10', label: 'Live projects', hint: 'Shipped & deployed' },
         { value: 'Full', label: 'Service', hint: 'Design · build · launch' },
-        { value: '1', label: 'Studio', hint: 'Cairo-based team' },
+        { value: '1', label: 'Team', hint: 'Based in Cairo' },
         { value: 'Direct', label: 'Communication', hint: 'No middlemen' },
       ],
     },
@@ -395,21 +396,28 @@ export const TRANSLATIONS: Record<Lang, SiteContent> = {
     testimonials: {
       label: 'Clients',
       title: 'What people said after launch',
-      subtitle: 'Short notes from projects we finished — not marketing copy.',
+      subtitle: 'Honest feedback from projects we delivered — in their own words.',
       items: [
         {
           quote:
-            'They shipped on the date we agreed on. Our team still uses the admin panel daily without calling us for every small change.',
-          name: 'Ahmed M.',
-          role: 'Operations',
-          company: 'Retail client',
+            'We did not have a proper brief — just photos and a rough idea. They told us what to build now and what to leave for later. No surprise invoices halfway through.',
+          name: 'Karim Hassan',
+          role: 'Store owner',
+          company: 'Online shop',
         },
         {
           quote:
-            'We had a rough idea and a tight budget. MMM helped us cut scope to what mattered and built exactly that.',
-          name: 'Sara H.',
-          role: 'Co-founder',
-          company: 'Early-stage startup',
+            'They promised a date and stuck to it. The admin side is not flashy, but my team uses it every day without needing a long training session.',
+          name: 'Ahmed Saad',
+          role: 'Supervisor',
+          company: 'Care home',
+        },
+        {
+          quote:
+            'Most of our customers open the menu from their phone. The page loads fast, looks clean, and we actually get calls to book now — before, everything was DMs.',
+          name: 'Mona Refaat',
+          role: 'Manager',
+          company: 'Restaurant',
         },
       ],
     },
@@ -454,7 +462,7 @@ export const TRANSLATIONS: Record<Lang, SiteContent> = {
   ar: {
     meta: {
       title: 'MMM — حلول برمجية',
-      description: 'MMM تبني مواقع وتطبيقات ويب للشركات في مصر والمنطقة.',
+      description: 'MMM تبني مواقع للمشاريع الصغيرة وتطبيقات ويب للشركات في مصر والمنطقة.',
     },
     nav: {
       links: [
@@ -471,13 +479,14 @@ export const TRANSLATIONS: Record<Lang, SiteContent> = {
     hero: {
       eyebrow: 'حلول برمجية · القاهرة',
       titleLine1: 'مواقع وتطبيقات ويب',
-      titleLine2: 'تتبني صح.',
+      titleLine2: 'بمعايير احترافية.',
       tagline:
-        'MMM استوديو برمجيات في القاهرة. بنصمّم ونبني منتجات ويب — من أول محادثة لحد التسليم والتشغيل.',
+        'MMM شركة حلول برمجية في القاهرة. نبني مواقع لأي مشروع صغير — من أول محادثة حتى التسليم والتشغيل.',
       btnPrimary: 'ابدأ مشروع',
-      btnSecondary: 'شوف أعمالنا',
+      btnSecondary: 'استعرض أعمالنا',
       focusTitle: 'أنواع المشاريع',
       focusItems: [
+        'مواقع لأي مشروع صغير',
         'مواقع شركات مع لوحة تحكم',
         'أنظمة داخلية ولوحات إدارة',
         'متاجر إلكترونية وحجز مواعيد',
@@ -485,139 +494,139 @@ export const TRANSLATIONS: Record<Lang, SiteContent> = {
     },
     about: {
       label: 'من نحن',
-      title: 'مين إحنا',
-      subtitle: 'استوديو في القاهرة — برمجيات مبنية تدوم.',
+      title: 'من نحن',
+      subtitle: 'شركة حلول برمجية في القاهرة — منتجات رقمية مبنية لتدوم.',
       intro:
-        'MMM استوديو برمجيات صغير. بناخد عدد محدود من المشاريع، وبنشتغل معاك مباشرة من النطاق للتسليم — من غير قوالب ولا وسيط.',
-      philosophyTitle: 'مبني يدوم، مش يبهر بس',
+        'MMM شركة حلول برمجية. نستقبل عدداً محدوداً من المشاريع، ونعمل معك مباشرة من تحديد النطاق حتى التسليم — بدون قوالب جاهزة أو وسيط.',
+      philosophyTitle: 'مبني ليدوم، لا ليبهر فقط',
       philosophy:
-        'البرمجيات الحلوة هادية — بتشتغل، سريعة، وقابلة للصيانة. بنختار عملاء أقل عشان كل منتج ياخد التركيز اللي يستحقه.',
+        'البرمجية الجيدة هادئة — تعمل، سريعة، وقابلة للصيانة. نختار عدداً أقل من العملاء حتى يحصل كل منتج على التركيز الذي يستحقه.',
       values: [
         {
           num: '01',
           title: 'نطاق واضح',
-          desc: 'إيه داخل وإيه بره متفق عليه قبل ما يبدأ الكود.',
+          desc: 'ما داخل المشروع وما خارجه يُتفق عليه قبل بدء التطوير.',
         },
         {
           num: '02',
           title: 'تواصل مباشر',
-          desc: 'بتكلم الناس اللي بتبني المنتج.',
+          desc: 'تتواصل مع الفريق الذي يبني منتجك.',
         },
         {
           num: '03',
-          title: 'كود تقدر تكمل عليه',
-          desc: 'مشاريع منظمة وموثقة فريقك يوسّعها.',
+          title: 'شيفرة قابلة للتوسع',
+          desc: 'مشاريع منظمة وموثّقة يمكن لفريقك البناء عليها.',
         },
       ],
     },
     stats: {
       items: [
-        { value: '+10', label: 'مشاريع live', hint: 'مُسلّمة ومُنشرة' },
+        { value: '+10', label: 'مشاريع مُطلقة', hint: 'مُسلّمة ومُنشرة' },
         { value: 'كامل', label: 'خدمة', hint: 'تصميم · بناء · إطلاق' },
-        { value: '1', label: 'استوديو', hint: 'فريق في القاهرة' },
-        { value: 'مباشر', label: 'تواصل', hint: 'من غير وسيط' },
+        { value: '1', label: 'فريق', hint: 'مقرّنا القاهرة' },
+        { value: 'مباشر', label: 'تواصل', hint: 'بدون وسيط' },
       ],
     },
     why: {
-      label: 'ليه MMM',
+      label: 'لماذا MMM',
       title: 'مستقر في التصميم. واضح في التنفيذ.',
       subtitle:
-        'بنجمع هندسة منظمة مع فهم عملي للبيزنس — برمجيات تشتغل النهاردة وفريقك يقدر يوسّعها بكرة.',
+        'نجمع هندسة منظمة مع فهم عملي للأعمال — برمجيات تعمل اليوم ويمكن لفريقك توسيعها غداً.',
       items: [
         {
           badge: 'Build',
           title: 'هندسة قوية',
           description:
-            'أنظمة modular وقابلة للصيانة ومنظمة للنمو — مش hacks سريعة تتكسر بعدين.',
+            'أنظمة معيارية وقابلة للصيانة ومنظمة للنمو — لا حلول مؤقتة تتعطل لاحقاً.',
         },
         {
           badge: 'UX',
           title: 'تجربة مستخدم نظيفة',
           description:
-            'واجهات احترافية وبديهية — متناسقة مع براندك في كل شاشة.',
+            'واجهات احترافية وبديهية — متناسقة مع علامتك التجارية في كل شاشة.',
         },
         {
           badge: 'ROI',
-          title: 'تركيز على البيزنس',
+          title: 'تركيز على الأعمال',
           description:
-            'كل feature ليها سبب حقيقي. بنساعدك تختصري الـ scope على اللي مهم قبل الكود.',
+            'لكل ميزة سبب حقيقي. نساعدك على تقليص نطاق العمل لما يهم فعلاً قبل التطوير.',
         },
         {
           badge: 'Support',
           title: 'شراكة طويلة',
           description:
-            'توثيق تسليم، fixes بعد الإطلاق، ومساحة لتطوير المنتج مع نمو شغلك.',
+            'توثيق عند التسليم، دعم بعد الإطلاق، ومجال لتطوير المنتج مع نمو أعمالك.',
         },
       ],
     },
     process: {
       label: 'العملية',
-      title: 'إزاي بنشتغل',
-      subtitle: 'مسار واضح من الفكرة للإطلاق — مع updates منتظمة طول الطريق.',
-      note: 'النطاق والأولويات ممكن تتغير وإحنا بنتعلم — بنخطط لده مش بنقاومه.',
+      title: 'كيف نعمل',
+      subtitle: 'مسار واضح من الفكرة إلى الإطلاق — مع تحديثات منتظمة طوال المشروع.',
+      note: 'قد يتغير النطاق والأولويات أثناء العمل — نخطط لذلك بدلاً من مقاومته.',
       items: [
         {
           step: '01',
-          title: 'Discovery & scoping',
+          title: 'الاكتشاف وتحديد النطاق',
           description:
-            'بنفهم أهدافك ومستخدمينك وقيودك — وبنحدد إيه داخل، إيه بره، والـ timeline الواقعي.',
+            'نفهم أهدافك ومستخدميك وقيودك — ثم نحدد ما داخل المشروع وما خارجه، والجدول الزمني الواقعي.',
         },
         {
           step: '02',
-          title: 'Design & planning',
-          description: 'Wireframes، data model، وخطة تقنية متفق عليها قبل التطوير.',
+          title: 'التصميم والتخطيط',
+          description: 'مخططات أولية، نموذج البيانات، وخطة تقنية متفق عليها قبل التطوير.',
         },
         {
           step: '03',
-          title: 'Build & review',
-          description: 'تطوير تدريجي مع demos — بتشوفي software شغّال، مش presentations.',
+          title: 'البناء والمراجعة',
+          description: 'تطوير تدريجي مع عروض دورية — ترى منتجاً يعمل، لا عروضاً تقديمية فقط.',
         },
         {
           step: '04',
-          title: 'Launch & handoff',
-          description: 'نشر، توثيق، وتدريب عشان فريقك يشغّل ويطوّر المنتج بثقة.',
+          title: 'الإطلاق والتسليم',
+          description: 'نشر، توثيق، وتدريب حتى يتمكن فريقك من تشغيل المنتج وتطويره بثقة.',
         },
       ],
     },
     services: {
       label: 'الخدمات',
-      title: 'إيه اللي بنبنيه',
-      subtitle: 'من مواقع شركات لأنظمة أعمال — فريق واحد للتصميم والتطوير والنشر.',
+      title: 'ما نبنيه',
+      subtitle: 'من مواقع الشركات إلى أنظمة الأعمال — فريق واحد للتصميم والتطوير والنشر.',
       items: [
         {
           num: '01',
-          title: 'مواقع شركات',
-          description: 'مواقع تعريفية وlanding pages — سريعة، responsive، وسهل تحدّثها.',
+          title: 'مواقع الشركات',
+          description: 'مواقع تعريفية وصفحات هبوط — سريعة، متجاوبة، وسهلة التحديث.',
           tags: ['Corporate', 'SEO', 'CMS'],
         },
         {
           num: '02',
-          title: 'تطبيقات ويب',
-          description: 'Dashboards وadmin panels وportals وأدوات داخلية.',
+          title: 'تطبيقات الويب',
+          description: 'لوحات تحكم، لوحات إدارية، بوابات، وأدوات داخلية.',
           tags: ['Dashboards', 'Admin', 'Portals'],
         },
         {
           num: '03',
-          title: 'تصميم UI',
-          description: 'Wireframes وتصميم واجهات قبل التطوير — الكل يتفق على الشكل الأول.',
+          title: 'تصميم الواجهات',
+          description: 'مخططات أولية وتصميم واجهات قبل التطوير — الجميع يتفق على الشكل مسبقاً.',
           tags: ['Wireframes', 'UI', 'Responsive'],
         },
         {
           num: '04',
-          title: 'Backend & APIs',
-          description: 'APIs آمنة، authentication، قواعد بيانات، وربط خدمات خارجية.',
+          title: 'الخلفية وواجهات البرمجة',
+          description: 'واجهات برمجة آمنة، مصادقة، قواعد بيانات، وربط خدمات خارجية.',
           tags: ['APIs', 'Auth', 'Integrations'],
         },
         {
           num: '05',
           title: 'استضافة ونشر',
-          description: 'Domains، SSL، cloud deployment، وmonitoring أساسي.',
+          description: 'نطاقات، شهادات أمان، نشر سحابي، ومراقبة أساسية.',
           tags: ['Hosting', 'SSL', 'Monitoring'],
         },
         {
           num: '06',
           title: 'تخطيط المشروع',
-          description: 'لسه مش متأكد ت build إيه؟ بنحدد features ووقت وميزانية قبل أي كود.',
+          description: 'لست متأكداً مما تريد بناءه؟ نحدد الميزات والوقت والميزانية قبل أي تطوير.',
           tags: ['Scope', 'Timeline', 'Budget'],
         },
       ],
@@ -625,8 +634,8 @@ export const TRANSLATIONS: Record<Lang, SiteContent> = {
     projects: {
       label: 'الأعمال',
       title: 'مشاريع مختارة',
-      subtitle: 'مشاريع حقيقية صممناها وبنيناها وسلّمناها — كل واحدة حسب احتياج العميل.',
-      viewProject: 'افتح المشروع',
+      subtitle: 'مشاريع حقيقية صممناها وبنيناها وسلّمناها — كل مشروع وفق احتياج العميل.',
+      viewProject: 'عرض المشروع',
       items: [
         {
           title: 'Locum',
@@ -669,7 +678,7 @@ export const TRANSLATIONS: Record<Lang, SiteContent> = {
           category: 'Restaurant · Landing',
           year: '2025',
           description:
-            'Landing page لمطعم: قائمة، شيفات، معرض صور، وتواصل — هدفها تحويل الزوار لحجوزات.',
+            'صفحة هبوط لمطعم: قائمة، شيفات، معرض صور، وتواصل — هدفها تحويل الزوار إلى حجوزات.',
           tags: ['Restaurant', 'Landing Page', 'Marketing'],
           color: '#2a1f19',
           image: '/screenshots/mealify.png',
@@ -681,52 +690,59 @@ export const TRANSLATIONS: Record<Lang, SiteContent> = {
     testimonials: {
       label: 'العملاء',
       title: 'كلام الناس بعد التسليم',
-      subtitle: 'ملاحظات قصيرة من مشاريع خلصناها — مش copy تسويقي.',
+      subtitle: 'ملاحظات من عملاء بعد تسليم المشروع — واقعية وبسيطة.',
       items: [
         {
           quote:
-            'سلّموا في الميعاد اللي اتفقنا عليه. فريقنا لسه بيستخدم ال admin panel يومياً من غير ما يكلّمنا في كل تعديل صغير.',
-          name: 'أحمد م.',
-          role: 'Operations',
-          company: 'عميل retail',
+            'ما كان لدينا وصف تفصيلي للمشروع — مجرد صور وفكرة عامة. حدّدوا معنا الأولويات، وظلّت التكلفة ضمن ما اتفقنا عليه.',
+          name: 'كريم حسن',
+          role: 'صاحب متجر',
+          company: 'تجارة إلكترونية',
         },
         {
           quote:
-            'كان عندنا فكرة roughly وميزانية محدودة. MMM ساعدونا نختصر ال scope على اللي مهم و build بالظبط كده.',
-          name: 'سارة ح.',
-          role: 'Co-founder',
-          company: 'Startup',
+            'اتفقنا على موعد وتم التسليم فيه. النظام بسيط ومباشر — الفريق يستخدمه يومياً دون الحاجة إلى تدريب مطوّل.',
+          name: 'أحمد سعد',
+          role: 'مشرف',
+          company: 'دار رعاية',
+        },
+        {
+          quote:
+            'أغلب عملائنا يعرضون القائمة من الهاتف. الصفحة سريعة ومنظمة، وبدأنا نستقبل اتصالات للحجز — قبل ذلك كان التواصل كله عبر الرسائل.',
+          name: 'منى رفعت',
+          role: 'مديرة',
+          company: 'مطعم',
         },
       ],
     },
     contact: {
       label: 'تواصل',
-      title: 'قولّنا عن مشروعك',
-      subtitle: 'رسالة قصيرة — محتاج إيه، ال timeline، وهل عندك designs. بنرد عادة في 1–2 يوم عمل.',
-      email: 'إيميل',
-      phone: 'تليفون',
-      instagram: 'إنستجرام',
+      title: 'أخبرنا عن مشروعك',
+      subtitle: 'رسالة قصيرة — ما تحتاجه، الجدول الزمني، وهل لديك تصاميم جاهزة. نرد عادة خلال يوم إلى يومي عمل.',
+      email: 'البريد الإلكتروني',
+      phone: 'الهاتف',
+      instagram: 'إنستغرام',
       followUs: 'تواصل معنا',
-      location: 'المكان',
+      location: 'الموقع',
       address: 'القاهرة، مصر',
-      success: 'اتبعتت. هنرد عليك قريب.',
+      success: 'تم الإرسال. سنعود إليك قريباً.',
       form: {
         name: 'الاسم',
         namePlaceholder: 'اسمك',
-        email: 'الإيميل',
-        phone: 'التليفون',
+        email: 'البريد الإلكتروني',
+        phone: 'الهاتف',
         phonePlaceholder: '0112 674 6232',
-        service: 'محتاج إيه؟',
-        servicePlaceholder: 'اختار',
+        service: 'ما الذي تحتاجه؟',
+        servicePlaceholder: 'اختر',
         message: 'الرسالة',
         messagePlaceholder: 'وصف مختصر للمشروع...',
         submit: 'إرسال',
         options: [
           { value: 'web', label: 'موقع' },
           { value: 'app', label: 'تطبيق ويب' },
-          { value: 'design', label: 'تصميم UI' },
-          { value: 'backend', label: 'Backend / API' },
-          { value: 'consult', label: 'تخطيط بس' },
+          { value: 'design', label: 'تصميم واجهات' },
+          { value: 'backend', label: 'خلفية / واجهة برمجة' },
+          { value: 'consult', label: 'تخطيط فقط' },
         ],
       },
     },
