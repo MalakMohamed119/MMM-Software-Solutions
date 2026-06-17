@@ -112,6 +112,40 @@
   }
 }
 
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes borderGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 24px rgba(34, 211, 238, 0.12);
+  }
+  50% {
+    box-shadow:
+      0 0 32px rgba(34, 211, 238, 0.2),
+      0 0 48px rgba(167, 139, 250, 0.1);
+  }
+}
+
 .reveal {
   opacity: 0;
   will-change: opacity, transform;
@@ -167,8 +201,11 @@ html[dir='rtl'] .reveal--right.is-visible {
     box-shadow 0.35s ease;
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+    transform: translateY(-6px);
+    border-color: rgba(34, 211, 238, 0.35);
+    box-shadow:
+      0 16px 40px rgba(0, 0, 0, 0.28),
+      0 0 24px rgba(34, 211, 238, 0.12);
   }
 }
 

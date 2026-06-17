@@ -11,7 +11,7 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: var(--color-surface);
-  box-shadow: 0 0 40px rgba(34, 211, 238, 0.06);
+  animation: borderGlow 4s ease-in-out infinite;
 }
 
 .stats__item {
@@ -20,13 +20,38 @@
   gap: 0.2rem;
   padding: 0.75rem;
   text-align: center;
+  transition: transform 0.35s var(--ease-out-expo, cubic-bezier(0.22, 1, 0.36, 1));
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  &:nth-child(1) .stats__value {
+    color: var(--color-accent-light);
+  }
+
+  &:nth-child(2) .stats__value {
+    color: var(--color-pop-violet);
+  }
+
+  &:nth-child(3) .stats__value {
+    color: var(--color-pop-emerald);
+  }
+
+  &:nth-child(4) .stats__value {
+    color: var(--color-pop-amber);
+  }
 }
 
 .stats__value {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--color-accent-light);
   line-height: 1.2;
+  transition: transform 0.3s ease;
+}
+
+.stats__item:hover .stats__value {
+  transform: scale(1.06);
 }
 
 .stats__label {
@@ -49,5 +74,19 @@
 @media (max-width: 420px) {
   .stats__grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stats__grid {
+    animation: none;
+  }
+
+  .stats__item:hover {
+    transform: none;
+  }
+
+  .stats__item:hover .stats__value {
+    transform: none;
   }
 }

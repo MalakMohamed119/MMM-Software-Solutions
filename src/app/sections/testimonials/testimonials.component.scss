@@ -9,6 +9,32 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: var(--color-surface);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '"';
+    position: absolute;
+    top: 0.5rem;
+    inset-inline-end: 1rem;
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 700;
+    opacity: 0.12;
+    color: var(--quote-accent, var(--color-accent-light));
+  }
+
+  &:nth-child(3n + 1) {
+    --quote-accent: var(--color-accent-light);
+  }
+
+  &:nth-child(3n + 2) {
+    --quote-accent: var(--color-pop-violet);
+  }
+
+  &:nth-child(3n + 3) {
+    --quote-accent: var(--color-pop-emerald);
+  }
 }
 
 .testimonials__quote {
@@ -17,6 +43,8 @@
   line-height: 1.75;
   margin-bottom: 1.25rem;
   font-style: normal;
+  position: relative;
+  z-index: 1;
 }
 
 .testimonials__author {

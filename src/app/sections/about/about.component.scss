@@ -37,14 +37,32 @@
   display: block;
   font-size: 0.75rem;
   font-weight: 700;
-  color: var(--color-accent-light);
   margin-bottom: 0.65rem;
+}
+
+.about__value:nth-child(1) .about__value-num {
+  color: var(--color-accent-light);
+}
+
+.about__value:nth-child(2) .about__value-num {
+  color: var(--color-pop-violet);
+}
+
+.about__value:nth-child(3) .about__value-num {
+  color: var(--color-pop-emerald);
 }
 
 .about__philosophy {
   margin: 0;
   padding: 1.5rem 1.75rem;
-  border-inline-start: 3px solid var(--color-accent);
+  border-inline-start: 3px solid transparent;
+  border-image: linear-gradient(
+      180deg,
+      var(--color-accent-light),
+      var(--color-pop-violet),
+      var(--color-pop-emerald)
+    )
+    1;
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   background: var(--color-primary);
 }

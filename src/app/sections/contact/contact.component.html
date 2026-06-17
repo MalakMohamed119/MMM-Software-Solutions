@@ -49,7 +49,7 @@
 
         <div class="contact__field">
           <label for="message">{{ langService.content().contact.form.message }}</label>
-          <textarea id="message" name="message" [(ngModel)]="form.message" required rows="5" [placeholder]="langService.content().contact.form.messagePlaceholder"></textarea>
+          <textarea id="message" name="message" [(ngModel)]="form.message" required rows="4" [placeholder]="langService.content().contact.form.messagePlaceholder"></textarea>
         </div>
 
         <button type="submit" class="btn btn--primary contact__submit" [disabled]="!contactForm.valid">
