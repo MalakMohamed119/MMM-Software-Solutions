@@ -1,0 +1,13 @@
+<section class="stats" aria-label="MMM highlights">
+  <div class="container stats__grid" appStaggerReveal>
+    @for (stat of langService.content().stats.items; track stat.label) {
+      <div class="stats__item stagger-item">
+        @if (stat.value) {
+          <span class="stats__value" [appCountUp]="stat.value"></span>
+        }
+        <span class="stats__label">{{ stat.label }}</span>
+        <span class="stats__hint">{{ stat.hint }}</span>
+      </div>
+    }
+  </div>
+</section>

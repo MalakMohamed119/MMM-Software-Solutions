@@ -1,0 +1,26 @@
+<section id="about" class="section section--surface about">
+  <div class="container">
+    <app-section-title
+      [label]="langService.content().about.label"
+      [title]="langService.content().about.title"
+      [subtitle]="langService.content().about.subtitle"
+    />
+
+    <p class="about__intro" appReveal variant="up">{{ langService.content().about.intro }}</p>
+
+    <div class="about__values" appStaggerReveal>
+      @for (value of langService.content().about.values; track value.title) {
+        <article class="about__value stagger-item card-lift">
+          <span class="about__value-num">{{ value.num }}</span>
+          <h4>{{ value.title }}</h4>
+          <p>{{ value.desc }}</p>
+        </article>
+      }
+    </div>
+
+    <blockquote class="about__philosophy" appReveal variant="up" [delay]="200">
+      <p class="about__philosophy-text">{{ langService.content().about.philosophy }}</p>
+      <cite>{{ langService.content().about.philosophyTitle }}</cite>
+    </blockquote>
+  </div>
+</section>

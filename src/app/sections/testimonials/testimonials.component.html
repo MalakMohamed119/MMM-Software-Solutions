@@ -1,0 +1,21 @@
+<section id="testimonials" class="section testimonials">
+  <div class="container">
+    <app-section-title
+      [label]="langService.content().testimonials.label"
+      [title]="langService.content().testimonials.title"
+      [subtitle]="langService.content().testimonials.subtitle"
+    />
+
+    <div class="testimonials__grid" appStaggerReveal>
+      @for (item of langService.content().testimonials.items; track item.name) {
+        <blockquote class="testimonials__card stagger-item card-lift">
+          <p class="testimonials__quote">"{{ item.quote }}"</p>
+          <footer class="testimonials__author">
+            <strong>{{ item.name }}</strong>
+            <span>{{ item.role }}, {{ item.company }}</span>
+          </footer>
+        </blockquote>
+      }
+    </div>
+  </div>
+</section>

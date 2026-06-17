@@ -1,0 +1,51 @@
+<header class="header" [class.header--scrolled]="scrolled()">
+  <div class="container header__inner">
+    <a href="#home" class="header__logo" (click)="closeMenu()">
+      <app-logo size="sm" />
+      <span class="header__brand">
+        <span class="header__name">{{ company.name }}</span>
+        <span class="header__tagline">{{ company.tagline }}</span>
+      </span>
+    </a>
+
+    <nav class="header__nav" [class.header__nav--open]="menuOpen()">
+      @for (link of langService.content().nav.links; track link.fragment) {
+        <a
+          [href]="'#' + link.fragment"
+          class="header__link"
+          [class.header__link--active]="isActive(link.fragment)"
+          [attr.aria-current]="isActive(link.fragment) ? 'page' : null"
+          (click)="closeMenu()"
+        >
+          {{ link.label }}
+        </a>
+      }
+      <a href="#contact" class="btn btn--primary header__cta" (click)="closeMenu()">
+        {{ langService.content().nav.cta }}
+      </a>
+    </nav>
+
+    <div class="header__actions">
+      <button
+        type="button"
+        class="header__lang"
+        (click)="toggleLanguage()"
+        [attr.aria-label]="langService.content().lang.toggleLabel"
+        [title]="langService.content().lang.toggleLabel"
+      >
+        {{ langService.content().lang.current }}
+      </button>
+
+      <button
+        class="header__toggle"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="menuOpen()"
+        [attr.aria-label]="langService.content().nav.menuLabel"
+      >
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+      </button>
+    </div>
+  </div>
+</header>

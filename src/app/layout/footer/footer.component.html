@@ -1,0 +1,35 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__brand" appReveal variant="up">
+      <div class="footer__brand-top">
+        <a href="#home" class="footer__logo">
+          <app-logo size="md" />
+        </a>
+          <div class="footer__identity">
+            <span class="footer__name">{{ company.fullName }}</span>
+            <span class="footer__tagline">{{ langService.content().hero.eyebrow }}</span>
+          </div>
+      </div>
+
+      <p class="footer__desc">{{ langService.content().about.intro }}</p>
+      <p class="footer__location">{{ langService.content().contact.address }}</p>
+
+      <div class="footer__social">
+        <app-social-icons />
+      </div>
+    </div>
+
+    <nav class="footer__nav" appReveal variant="fade" [delay]="150" [attr.aria-label]="langService.content().footer.quickLinks">
+      @for (link of langService.content().nav.links; track link.fragment; let last = $last) {
+        <a [href]="'#' + link.fragment">{{ link.label }}</a>
+        @if (!last) {
+          <span class="footer__nav-sep" aria-hidden="true">·</span>
+        }
+      }
+    </nav>
+
+    <div class="footer__bottom">
+      <p>&copy; {{ year }} {{ company.name }}. {{ langService.content().footer.rights }}</p>
+    </div>
+  </div>
+</footer>

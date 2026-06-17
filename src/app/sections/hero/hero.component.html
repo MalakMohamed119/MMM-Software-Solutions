@@ -1,0 +1,34 @@
+<section id="home" class="hero">
+  <div class="hero__bg" aria-hidden="true">
+    <span class="hero__orb hero__orb--1"></span>
+    <span class="hero__orb hero__orb--2"></span>
+    <span class="hero__orb hero__orb--3"></span>
+  </div>
+
+  <div class="container hero__inner">
+    <div class="hero__main">
+      <p class="hero__eyebrow hero-enter hero-enter--1">{{ langService.content().hero.eyebrow }}</p>
+
+      <h1 class="hero__title hero-enter hero-enter--2">
+        {{ langService.content().hero.titleLine1 }}<br />
+        <span class="accent-text">{{ langService.content().hero.titleLine2 }}</span>
+      </h1>
+
+      <p class="hero__tagline hero-enter hero-enter--4">{{ langService.content().hero.tagline }}</p>
+
+      <div class="hero__actions hero-enter hero-enter--5">
+        <a href="#contact" class="btn btn--primary">{{ langService.content().hero.btnPrimary }}</a>
+        <a href="#services" class="btn btn--outline">{{ langService.content().hero.btnSecondary }}</a>
+      </div>
+    </div>
+
+    <aside class="hero__aside hero-enter hero-enter--6 card-lift">
+      <p class="hero__aside-title">{{ langService.content().hero.focusTitle }}</p>
+      <ul class="hero__list">
+        @for (item of langService.content().hero.focusItems; track item; let i = $index) {
+          <li class="hero__list-item" [style.animation-delay.ms]="700 + i * 120">{{ item }}</li>
+        }
+      </ul>
+    </aside>
+  </div>
+</section>

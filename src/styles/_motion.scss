@@ -1,0 +1,209 @@
+:root {
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --motion-duration: 0.65s;
+  --motion-stagger: 90ms;
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes revealDown {
+  from {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes revealLeft {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes revealRight {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes revealScale {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes revealFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes floatSoft {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(12px, -18px) scale(1.05);
+  }
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  100% {
+    transform: scale(1.55);
+    opacity: 0;
+  }
+}
+
+@keyframes headerSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmerLine {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  will-change: opacity, transform;
+
+  &.is-visible {
+    animation: revealUp var(--motion-duration) var(--ease-out-expo) forwards;
+    animation-delay: var(--reveal-delay, 0ms);
+  }
+
+  &--down.is-visible {
+    animation-name: revealDown;
+  }
+
+  &--left.is-visible {
+    animation-name: revealLeft;
+  }
+
+  &--right.is-visible {
+    animation-name: revealRight;
+  }
+
+  &--scale.is-visible {
+    animation-name: revealScale;
+  }
+
+  &--fade.is-visible {
+    animation-name: revealFade;
+  }
+}
+
+html[dir='rtl'] .reveal--left.is-visible {
+  animation-name: revealRight;
+}
+
+html[dir='rtl'] .reveal--right.is-visible {
+  animation-name: revealLeft;
+}
+
+[appStaggerReveal]:not(.is-revealed) .stagger-item {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+[appStaggerReveal].is-revealed .stagger-item {
+  animation: revealUp 0.7s var(--ease-out-expo) forwards;
+  animation-delay: calc(var(--stagger-i, 0) * var(--motion-stagger));
+}
+
+.card-lift {
+  transition:
+    transform 0.35s var(--ease-out-expo),
+    border-color 0.25s ease,
+    box-shadow 0.35s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.btn {
+  transition:
+    transform 0.25s var(--ease-spring),
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.98);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal,
+  [appStaggerReveal]:not(.is-revealed) .stagger-item {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

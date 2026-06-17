@@ -1,0 +1,133 @@
+.projects__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.projects__item {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  transition: var(--transition);
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.18);
+
+    .projects__thumb-img {
+      transform: scale(1.03);
+    }
+  }
+}
+
+.projects__thumb {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  min-height: 140px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0.75rem;
+  transition: var(--transition);
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.05) 55%);
+    pointer-events: none;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.projects__thumb-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.35s ease;
+}
+
+.projects__link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-accent);
+
+  &:hover {
+    color: var(--color-accent-hover);
+  }
+}
+
+.projects__year {
+  position: relative;
+  z-index: 1;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.projects__meta {
+  margin-bottom: 0.35rem;
+}
+
+.projects__category {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.projects__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+
+  a {
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+}
+
+.projects__desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin-bottom: 0.75rem;
+}
+
+.projects__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.projects__tag {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+@media (max-width: 640px) {
+  .projects__item {
+    grid-template-columns: 1fr;
+  }
+
+  .projects__thumb {
+    min-height: 180px;
+  }
+}

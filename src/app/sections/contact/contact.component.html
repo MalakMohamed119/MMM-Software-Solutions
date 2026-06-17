@@ -1,0 +1,61 @@
+<section id="contact" class="section section--dark contact">
+  <div class="container">
+    <app-section-title
+      [label]="langService.content().contact.label"
+      [title]="langService.content().contact.title"
+      [subtitle]="langService.content().contact.subtitle"
+    />
+
+    <div class="contact__grid">
+      <div class="contact__info" appReveal variant="right">
+        <div class="contact__social card-lift">
+          <p class="contact__social-label">{{ langService.content().contact.followUs }}</p>
+          <app-social-icons [large]="true" />
+        </div>
+
+        <div class="contact__card card-lift">
+          <h4>{{ langService.content().contact.phone }}</h4>
+          <p><a [href]="'tel:' + company.phone">{{ company.phoneDisplay }}</a></p>
+        </div>
+
+        <div class="contact__card card-lift">
+          <h4>{{ langService.content().contact.location }}</h4>
+          <p>{{ langService.content().contact.address }}</p>
+        </div>
+      </div>
+
+      <form class="contact__form card-lift" appReveal variant="left" [delay]="150" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+        @if (submitted()) {
+          <div class="contact__success">
+            ✓ {{ langService.content().contact.success }}
+          </div>
+        }
+
+        <div class="contact__row">
+          <div class="contact__field">
+            <label for="name">{{ langService.content().contact.form.name }}</label>
+            <input type="text" id="name" name="name" [(ngModel)]="form.name" required [placeholder]="langService.content().contact.form.namePlaceholder" />
+          </div>
+          <div class="contact__field">
+            <label for="email">{{ langService.content().contact.form.email }}</label>
+            <input type="email" id="email" name="email" [(ngModel)]="form.email" required [placeholder]="company.email" />
+          </div>
+        </div>
+
+        <div class="contact__field">
+          <label for="phone">{{ langService.content().contact.form.phone }}</label>
+          <input type="tel" id="phone" name="phone" [(ngModel)]="form.phone" [placeholder]="langService.content().contact.form.phonePlaceholder" />
+        </div>
+
+        <div class="contact__field">
+          <label for="message">{{ langService.content().contact.form.message }}</label>
+          <textarea id="message" name="message" [(ngModel)]="form.message" required rows="5" [placeholder]="langService.content().contact.form.messagePlaceholder"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--primary contact__submit" [disabled]="!contactForm.valid">
+          {{ langService.content().contact.form.submit }}
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

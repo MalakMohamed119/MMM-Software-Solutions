@@ -1,0 +1,54 @@
+<section id="projects" class="section section--surface projects">
+  <div class="container">
+    <app-section-title
+      [label]="langService.content().projects.label"
+      [title]="langService.content().projects.title"
+      [subtitle]="langService.content().projects.subtitle"
+    />
+
+    <div class="projects__list" appStaggerReveal [stagger]="120">
+      @for (project of langService.content().projects.items; track project.title) {
+        <article class="projects__item stagger-item card-lift">
+          <a
+            class="projects__thumb"
+            [style.background-color]="project.color"
+            [href]="project.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            [attr.aria-label]="langService.content().projects.viewProject + ': ' + project.title"
+          >
+            <img
+              class="projects__thumb-img"
+              [src]="project.image"
+              [alt]="project.title"
+              loading="lazy"
+            />
+            <span class="projects__year">{{ project.year }}</span>
+          </a>
+          <div class="projects__body">
+            <div class="projects__meta">
+              <span class="projects__category">{{ project.category }}</span>
+            </div>
+            <h3 class="projects__title">
+              <a [href]="project.url" target="_blank" rel="noopener noreferrer">{{ project.title }}</a>
+            </h3>
+            <p class="projects__desc">{{ project.description }}</p>
+            <div class="projects__tags">
+              @for (tag of project.tags; track tag) {
+                <span class="projects__tag">{{ tag }}</span>
+              }
+            </div>
+            <a
+              class="projects__link"
+              [href]="project.url"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ langService.content().projects.viewProject }} ↗
+            </a>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

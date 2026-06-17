@@ -1,0 +1,21 @@
+<section id="process" class="section section--dark process">
+  <div class="container">
+    <app-section-title
+      [label]="langService.content().process.label"
+      [title]="langService.content().process.title"
+      [subtitle]="langService.content().process.subtitle"
+    />
+
+    <div class="process__grid" appStaggerReveal>
+      @for (step of langService.content().process.items; track step.step) {
+        <article class="process__step stagger-item card-lift">
+          <span class="process__num">{{ step.step }}</span>
+          <h3 class="process__title">{{ step.title }}</h3>
+          <p class="process__desc">{{ step.description }}</p>
+        </article>
+      }
+    </div>
+
+    <p class="process__note" appReveal variant="fade" [delay]="400">{{ langService.content().process.note }}</p>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+<section id="why" class="section section--surface why">
+  <div class="container">
+    <app-section-title
+      [label]="langService.content().why.label"
+      [title]="langService.content().why.title"
+      [subtitle]="langService.content().why.subtitle"
+    />
+
+    <div class="why__grid" appStaggerReveal>
+      @for (item of langService.content().why.items; track item.title) {
+        <article class="why__card stagger-item card-lift">
+          <span class="why__badge">{{ item.badge }}</span>
+          <h3 class="why__title">{{ item.title }}</h3>
+          <p class="why__desc">{{ item.description }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
