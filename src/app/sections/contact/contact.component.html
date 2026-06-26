@@ -15,7 +15,11 @@
 
         <div class="contact__card card-lift">
           <h4>{{ langService.content().contact.phone }}</h4>
-          <p><a [href]="'tel:' + company.phone">{{ company.phoneDisplay }}</a></p>
+          <p>
+            <a [href]="'tel:' + company.phone">
+              {{ langService.isRtl() ? '٠١١٢ ٦٧٤ ٦٢٣٢' : company.phoneDisplay }}
+            </a>
+          </p>
         </div>
 
         <div class="contact__card card-lift">

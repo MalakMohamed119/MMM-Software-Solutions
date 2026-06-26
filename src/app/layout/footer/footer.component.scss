@@ -99,7 +99,11 @@
   font-size: 0.8rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .footer {
+    padding-bottom: calc(1.5rem + 4.5rem + env(safe-area-inset-bottom, 0px));
+  }
+
   .footer__brand-top {
     flex-direction: column;
     gap: 0.85rem;

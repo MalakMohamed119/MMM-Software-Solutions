@@ -57,6 +57,20 @@ export class HeaderComponent implements AfterViewInit, OnDestroy {
     this.scrollRaf = requestAnimationFrame(() => this.updateActiveSection());
   }
 
+  @HostListener('document:keydown.escape')
+  onEscape(): void {
+    if (this.menuOpen()) {
+      this.closeMenu();
+    }
+  }
+
+  @HostListener('window:resize')
+  onResize(): void {
+    if (window.innerWidth > 900 && this.menuOpen()) {
+      this.closeMenu();
+    }
+  }
+
   isActive(fragment: string): boolean {
     return this.activeFragment() === fragment;
   }

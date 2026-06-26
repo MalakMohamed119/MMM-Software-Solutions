@@ -1,14 +1,29 @@
-<header class="header" [class.header--scrolled]="scrolled()">
+<header class="header" [class.header--scrolled]="scrolled()" [class.header--menu-open]="menuOpen()">
   <div class="container header__inner">
     <a href="#home" class="header__logo" (click)="closeMenu()">
       <app-logo size="sm" />
       <span class="header__brand">
         <span class="header__name">{{ company.name }}</span>
-        <span class="header__tagline">{{ company.tagline }}</span>
+        <span class="header__tagline">
+          {{ langService.isRtl() ? 'تطوير مواقع وتطبيقات' : company.tagline }}
+        </span>
       </span>
     </a>
 
-    <nav class="header__nav" [class.header__nav--open]="menuOpen()">
+    <button
+      type="button"
+      class="header__scrim"
+      [class.header__scrim--open]="menuOpen()"
+      [attr.aria-hidden]="true"
+      tabindex="-1"
+      (click)="closeMenu()"
+    ></button>
+
+    <nav
+      id="header-nav"
+      class="header__nav"
+      [class.header__nav--open]="menuOpen()"
+    >
       @for (link of langService.content().nav.links; track link.fragment) {
         <a
           [href]="'#' + link.fragment"
@@ -37,10 +52,13 @@
       </button>
 
       <button
+        type="button"
         class="header__toggle"
+        [class.header__toggle--open]="menuOpen()"
         (click)="toggleMenu()"
         [attr.aria-expanded]="menuOpen()"
-        [attr.aria-label]="langService.content().nav.menuLabel"
+        [attr.aria-controls]="'header-nav'"
+        [attr.aria-label]="menuOpen() ? langService.content().nav.closeMenuLabel : langService.content().nav.menuLabel"
       >
         <span class="header__toggle-bar"></span>
         <span class="header__toggle-bar"></span>
